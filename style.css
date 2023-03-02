@@ -574,7 +574,7 @@ FAQ SECTION |INTERSHIP SECTION
     font-size: 16px;
     position: absolute;
     top: 30px;
-    right: 30px;
+    right: 8px;
 }
 
 .faq-toggle:focus{
@@ -590,16 +590,16 @@ FAQ SECTION |INTERSHIP SECTION
     display: none;
 }
 
-.faq-active .faq-toggle .chevron-up{
+.faq.active .faq-toggle .chevron-up{
     color: #fff;
     display: block;
 }
 
-.faq-active .faq-toggle .chevron-down{
+.faq.active .faq-toggle .chevron-down{
     display: none;
 }
 
-.faq-active .faq-toggle{
+.faq.active .faq-toggle{
     background-color: #9fa4a8;
 }
 
