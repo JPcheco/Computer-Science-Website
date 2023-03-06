@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
-*{
+@font-face {
+    font-family: WhitneyBook;
+    src: url(Whitney%20Book%20Regular.otf);
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-.max-width{
+.max-width {
     max-width: 1300px;
     margin: auto;
     min-height: 100vh;
 }
 
-html{
+html {
+    font-family: WhitneyBook;
     scroll-behavior: smooth;
 }
+
 
 /* 
 **********************
@@ -23,12 +30,12 @@ scroll-up-btn Section
 **********************
 */
 
-.scroll-up-btn img{
+.scroll-up-btn img {
     width: 45px;
     height: 42px;
 }
 
-.scroll-up-btn{
+.scroll-up-btn {
     position: fixed;
     height: 45px;
     width: 42px;
@@ -45,12 +52,12 @@ scroll-up-btn Section
 
     display: flex;
 
-    opacity: 0; 
+    opacity: 0;
     transition: all 0.3s ease;
     pointer-events: none;
 }
 
-.scroll-up-btn.active{
+.scroll-up-btn.active {
     bottom: 30px;
     opacity: 1;
     pointer-events: auto;
@@ -62,9 +69,11 @@ scroll-up-btn Section
 **********************
 */
 
-header{
+header {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     background: #53188C;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
     padding: 0px 7%;
@@ -75,16 +84,16 @@ header{
     position: sticky;
 }
 
-header .navbar ul{
+header .navbar ul {
     list-style: none;
 }
 
-header .navbar ul li{
+header .navbar ul li {
     position: relative;
     float: left;
 }
 
-header .navbar ul li a{
+header .navbar ul li a {
     font-size: 20px;
     padding: 20px;
     color: white;
@@ -93,12 +102,12 @@ header .navbar ul li a{
     border-radius: 10px;
 }
 
-header .navbar ul li a:hover{
+header .navbar ul li a:hover {
     background: white;
     color: #53188C;
 }
 
-header .navbar ul li ul{
+header .navbar ul li ul {
     position: absolute;
     left: 0;
     width: 200px;
@@ -106,58 +115,61 @@ header .navbar ul li ul{
     display: none;
 }
 
-header .navbar ul li ul li{
+header .navbar ul li ul li {
     width: 100%;
     border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
-header .navbar ul li:hover > ul{
+header .navbar ul li:hover>ul {
     display: initial;
 }
 
-#menu-bar{
+#menu-bar {
     display: none;
 }
 
-header label{
+header label {
     font-size: 20px;
     color: white;
     cursor: pointer;
     display: none;
 }
 
-@media(max-width:991px){
-    header{
+@media(max-width:991px) {
+    header {
         padding: 20px;
     }
 
-    header label{
+    header label {
         display: initial;
     }
 
-    header .navbar{
+    header .navbar {
         position: absolute;
-        top: 100%; left: 0; right: 0;
+        top: 100%;
+        left: 0;
+        right: 0;
         background: #53188C;
         border-top: 1px solid rgba(0, 0, 0, .1);
         display: none;
         height: 60vh;
     }
 
-    header .navbar ul li{
+    header .navbar ul li {
         width: 100%;
     }
 
-    header .navbar ul li ul{
+    header .navbar ul li ul {
         position: relative;
         width: 100%;
     }
 
-    header .navbar ul li ul li{
-        background: #8f4bcf; /*#8dd3cb official school secondary color */
+    header .navbar ul li ul li {
+        background: #8f4bcf;
+        /*#8dd3cb official school secondary color */
     }
 
-    #menu-bar:checked ~ .navbar{
+    #menu-bar:checked~.navbar {
         display: initial;
     }
 }
@@ -169,59 +181,59 @@ header label{
 ***********************
 */
 
-.homepage h1{
-  text-align: center;
-  font-weight: 400;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 50px;
-  padding: 20px;
+.homepage h1 {
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+    padding: 20px;
 }
 
-.homepage h2{
-  text-align: center;
-  font-weight: 400;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 35px;
-  padding: 20px;
+.homepage h2 {
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    padding: 20px;
 }
 
-.homepage h3{
-	text-align: center;
-  font-weight: 400;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 35px;
-  padding: 20px;
+.homepage h3 {
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    padding: 20px;
 }
 
-.homepage p{
-  text-align: center;
-  font-weight: 100;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
-  padding: 5px;
+.homepage p {
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    padding: 5px;
 }
 
 /* HOME PAGE 2 */
-.homepage2{
+.homepage2 {
     /* height: 100vh; */
     /* border: 3px solid black; */
     padding: 25px;
 }
 
-.homepage2 h1{
-  text-align: center;
-  font-weight: 400;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 35px;
-  padding: 20px;
+.homepage2 h1 {
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    padding: 20px;
 }
 
-.homepage2 p{
-  text-align: center;
-  font-weight: 100;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
-  padding: 5px;
+.homepage2 p {
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    padding: 5px;
 }
 
 /* 
@@ -230,7 +242,7 @@ header label{
 *****************************
 */
 
-body{
+body {
     min-height: 100vh;
     position: relative;
 }
@@ -248,7 +260,7 @@ body{
     clear: both;
 } */
 
-footer#notspecial{
+footer#notspecial {
     /* bottom: 0; */
     position: absolute;
     width: 100%;
@@ -261,7 +273,7 @@ footer#notspecial{
     clear: both;
 }
 
-footer#special{
+footer#special {
     bottom: 0;
     /* position: absolute; */
     width: 100%;
@@ -274,17 +286,17 @@ footer#special{
     clear: both;
 }
 
-footer .box{
+footer .box {
     display: flex;
     justify-content: space-between;
 }
 
-footer span{
+footer span {
     font-weight: 200;
     color: #53188C;
 }
 
-.backgroundIMG{
+.backgroundIMG {
     position: fixed;
     z-index: -999;
     background-size: cover;
@@ -292,9 +304,10 @@ footer span{
     background-position: center center;
     width: 100%;
 }
-.backgroundIMG img{
+
+.backgroundIMG img {
     height: 80vh;
-    object-fit: contain;  
+    object-fit: contain;
     width: 100%;
     text-align: center;
     opacity: 0.5;
@@ -305,19 +318,19 @@ footer span{
             CS COURSES SECTION 
 ********************************************           
 */
-.CourseCards{
+.CourseCards {
     max-width: 1300px;
     margin: auto;
     height: auto;
     /* padding-top: -175px; */
 }
 
-.CourseCards .WholeCard{
-    display:block;
-    float:left;
+.CourseCards .WholeCard {
+    display: block;
+    float: left;
 }
 
-.card{
+.card {
     width: 330px;
     min-height: 470px;
     background: #f1f1f1;
@@ -326,23 +339,23 @@ footer span{
     box-shadow: 0 0 20px #00000070;
 }
 
-.middle{
+.middle {
     margin: 48.3px;
 }
 
-.top-section{
+.top-section {
     position: relative;
     min-height: 250px;
     max-height: 250px;
 }
 
-.top-section img{
+.top-section img {
     width: 100%;
     min-height: 250px;
     object-fit: cover;
 }
 
-.name{
+.name {
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -353,19 +366,19 @@ footer span{
     min-width: 310px;
 }
 
-.info-section{
+.info-section {
     padding: 20px;
     padding-top: 0;
     min-height: 225px;
     max-height: 225px;
 }
 
-.info-section h2{
+.info-section h2 {
     position: relative;
     font-size: 16px;
 }
 
-.info-section p{
+.info-section p {
     padding: 8px;
     text-align: left;
     font-size: 14px;
@@ -376,15 +389,14 @@ footer span{
     overflow: auto;
 }
 
-.info-section h3{
+.info-section h3 {
     padding: 5px;
     color: #53188C;
     text-align: center;
 }
 
-@media screen and (max-width:1024px)
-{
-    .CourseCards .middle{
+@media screen and (max-width:1024px) {
+    .CourseCards .middle {
         margin-left: 75px;
         margin-right: 75px;
     }
@@ -396,31 +408,32 @@ FACULTY PAGE SECTION
 ***************************
 */
 
-.profileCards{
+.profileCards {
     max-width: 1300px;
     margin: auto;
 }
 
-.profileCards .row{
-    display:block;
-    float:left;
+.profileCards .row {
+    display: block;
+    float: left;
     /* min-height: 490px; */
     margin: 50px;
 }
 
-.faccolumn{
+.faccolumn {
     border: 5px solid rgba(171, 54, 243, 0.703);
 }
-  
+
 /* Add some shadows to create a card effect */
 .faccard {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8); /* last was 0.2 */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    /* last was 0.2 */
     background-color: rgba(171, 54, 243, 0.703);
     color: white;
     max-width: 315px;
 }
 
-.faccard img{
+.faccard img {
     max-width: 315px;
     max-height: 315px;
     min-width: 315px;
@@ -438,14 +451,15 @@ FACULTY PAGE SECTION
 }
 
 /* Clear floats */
-.faccontainer::after, .row::after {
+.faccontainer::after,
+.row::after {
     content: "";
     clear: both;
     display: table;
 }
 
 .factitle {
-    color: white;   
+    color: white;
 }
 
 .facbutton {
@@ -464,19 +478,20 @@ FACULTY PAGE SECTION
     background-color: #555;
 }
 
-.faccontainer a{
+.faccontainer a {
     color: white;
 }
 
 /* Display the columns below each other instead of side by side on small screens*/
-@media screen and (max-width: 1024px) 
-{ /* this is good for phone screens^^^ */
+@media screen and (max-width: 1024px) {
+
+    /* this is good for phone screens^^^ */
     .faccolumn {
         width: 100%;
         display: block;
     }
 
-    .profileCards .row{
+    .profileCards .row {
         margin-top: 25px;
         margin-bottom: 25px;
     }
@@ -488,7 +503,7 @@ FAQ SECTION |INTERSHIP SECTION
 *********************************
 */
 
-.heading{
+.heading {
     position: relative;
     text-align: center;
     font-weight: 400;
@@ -497,7 +512,7 @@ FAQ SECTION |INTERSHIP SECTION
     padding: 20px;
 }
 
-.heading::before{
+.heading::before {
     content: "";
     position: absolute;
     bottom: 5px;
@@ -508,7 +523,7 @@ FAQ SECTION |INTERSHIP SECTION
     transform: translateX(-50%);
 }
 
-.subheading{
+.subheading {
     text-align: center;
     font-weight: 300;
     font-family: 'Ubuntu', sans-serif;
@@ -518,7 +533,7 @@ FAQ SECTION |INTERSHIP SECTION
 
 /* ************************ */
 
-.faq{
+.faq {
     background-color: transparent;
     border: 1px solid #9fa4a8;
     border-radius: 10px;
@@ -529,21 +544,21 @@ FAQ SECTION |INTERSHIP SECTION
     transition: 0.3s ease;
 }
 
-.faq.active{
+.faq.active {
     background-color: #fff;
     box-shadow: 0 3px 6px #0000001a, 0 3px 6px #0000001a;
 }
 
-.faq-answer{
+.faq-answer {
     display: none;
     margin: 30px 0 0;
 }
 
-.faq.active .faq-answer{
+.faq.active .faq-answer {
     display: block;
 }
 
-.faq-toggle{
+.faq-toggle {
     background-color: transparent;
     border: 0;
     border-radius: 50%;
@@ -557,35 +572,35 @@ FAQ SECTION |INTERSHIP SECTION
     right: 8px;
 }
 
-.faq-toggle:focus{
+.faq-toggle:focus {
     outline: 0;
 }
 
-.faq-toggle img{
+.faq-toggle img {
     width: 20px;
     height: 20px;
 }
 
-.faq-toggle .chevron-up{
+.faq-toggle .chevron-up {
     display: none;
 }
 
-.faq.active .faq-toggle .chevron-up{
+.faq.active .faq-toggle .chevron-up {
     color: #fff;
     display: block;
 }
 
-.faq.active .faq-toggle .chevron-down{
+.faq.active .faq-toggle .chevron-down {
     display: none;
 }
 
-.faq.active .faq-toggle{
+.faq.active .faq-toggle {
     background-color: #9fa4a8;
 }
 
 /* ************************ */
 
-.question{
+.question {
     font-family: 'Poppins', sans-serif;
     font-style: italic;
     color: #660066;
@@ -593,26 +608,26 @@ FAQ SECTION |INTERSHIP SECTION
     font-weight: 300;
 }
 
-.answer{
+.answer {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 200;
 }
 
-.text{
+.text {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 200;
     text-align: center;
 }
 
-.names{
+.names {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 100;
 }
 
-.yeartitle{
+.yeartitle {
     text-align: center;
     /* font-style: bold; */
     font-weight: 400;
@@ -620,22 +635,22 @@ FAQ SECTION |INTERSHIP SECTION
     font-size: 20px;
 }
 
-.yearclasses{
+.yearclasses {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 600;
 }
 
-.yearclasses a{
+.yearclasses a {
     color: #53188C;
 }
 
-.yearclasses a:hover{
+.yearclasses a:hover {
     font-style: italic;
 }
 
-.yeartitle span{
+.yeartitle span {
     color: #53188C;
     text-align: center;
     font-weight: 900;
@@ -648,16 +663,16 @@ FAQ SECTION |INTERSHIP SECTION
 ACM CHAPTER SECTION 
 *************************/
 
-.ACM h1{
-  position: relative;
-  text-align: center;
-  font-weight: 400;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 50px;
-  padding: 20px;
+.ACM h1 {
+    position: relative;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+    padding: 20px;
 }
 
-.ACM h1::before{
+.ACM h1::before {
     content: "";
     position: absolute;
     bottom: 5px;
@@ -668,73 +683,73 @@ ACM CHAPTER SECTION
     transform: translateX(-50%);
 }
 
-.ACM h2{
-  text-align: center;
-  font-weight: 200;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 50px;
-  padding: 20px;
+.ACM h2 {
+    text-align: center;
+    font-weight: 200;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+    padding: 20px;
 }
 
-.officers ul li{
+.officers ul li {
     list-style: none;
-	text-align: center;
-	font-weight: 100;
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 25px;
-	padding: 5px;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    padding: 5px;
 }
 
-.ACM h3{
-  text-align: center;
-  font-weight: 200;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 50px;
-  padding: 20px;
+.ACM h3 {
+    text-align: center;
+    font-weight: 200;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+    padding: 20px;
 }
 
-.ACMlinks h1{
-  text-align: center;
-  font-weight: 400;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 40px;
-  padding: 30px;
+.ACMlinks h1 {
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    padding: 30px;
 }
 
-.ACMlinks h2{
-  text-align: center;
-  font-weight: 400;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 35px;
-  padding: 30px;
+.ACMlinks h2 {
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    padding: 30px;
 }
 
-.ACMlinks ul li{
+.ACMlinks ul li {
     list-style: none;
-	text-align: center;
-	font-weight: 100;
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 25px;
-	padding: 5px;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    padding: 5px;
 }
 
-.ACMevents h1{
-  text-align: center;
-  font-weight: 400;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 40px;
-  padding: 30px;
+.ACMevents h1 {
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    padding: 30px;
 }
 
-.ACMevents h2{
-  text-align: center;
-  font-weight: 400;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 35px;
-  padding: 30px;
+.ACMevents h2 {
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    padding: 30px;
 }
 
-.ACMevents p{
+.ACMevents p {
     text-align: center;
     font-weight: 100;
     font-family: 'Ubuntu', sans-serif;
@@ -742,19 +757,113 @@ ACM CHAPTER SECTION
     padding: 5px;
 }
 
-.ACMevents h3{
-  text-align: center;
-  font-weight: 400;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 35px;
-  padding: 30px;
+.ACMevents h3 {
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 35px;
+    padding: 30px;
 }
 
-.ACMevents ul li{
+.ACMevents ul li {
     list-style: none;
-	text-align: center;
-	font-weight: 100;
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 20px;
-	padding: 10px;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Search Bar for CSCourses */
+
+
+form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(171, 54, 243, 0.703);
+}
+
+input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    ;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: rgba(171, 54, 243, 0.703);
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+form:hover,
+form:valid {
+    width: 200px;
+    cursor: pointer;
+}
+
+form:hover input,
+form:valid input {
+    display: block;
+}
+
+form:hover .fa,
+form:valid .fa {
+    background: rgba(171, 54, 243, 0.703);
+    color: white;
+}
+
+
+form:valid a {
+    display: block;
+}
+
+/* custom scroll bar */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
