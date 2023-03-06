@@ -5,7 +5,7 @@
     src: url(Whitney%20Book%20Regular.otf);
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,15 +30,10 @@ scroll-up-btn Section
 **********************
 */
 
-.scroll-up-btn img {
-    width: 45px;
-    height: 42px;
-}
-
 .scroll-up-btn {
     position: fixed;
     height: 45px;
-    width: 42px;
+    width: 45px;
     background: #53188C;
     right: 30px;
     bottom: 10px;
@@ -49,9 +44,6 @@ scroll-up-btn Section
     font-size: 44px;
     border-radius: 6px;
     cursor: pointer;
-
-    display: flex;
-
     opacity: 0;
     transition: all 0.3s ease;
     pointer-events: none;
@@ -246,19 +238,6 @@ body {
     min-height: 100vh;
     position: relative;
 }
-
-/* footer#notspecial1{
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-
-    font-family: 'Poppins', sans-serif;
-    text-align: end;
-    background: black;
-    padding: 20px 23px;
-    color: white;
-    clear: both;
-} */
 
 footer#notspecial {
     /* bottom: 0; */
@@ -809,7 +788,7 @@ input {
     padding: 0 20px;
 }
 
-.fa {
+.fa-search {
     box-sizing: border-box;
     padding: 10px;
     width: 42.5px;
